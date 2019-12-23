@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <script>
+      function change() {
+        var v = document.getElementById("a").value;
+        document.getElementById("b").innerHTML = "i am " + v + ".";
+      }
+      function click1() {
+        document.getElementById("c").innerHTML = "my name is vaibhav";
+      }
+      function mouseover() {
+        document.getElementById("d").innerHTML = "my name is vaibhav";
+      }
+      function mouseout() {
+        document.getElementById("d").innerHTML = " ";
+      }
+      function keydown() {
+        document.getElementById("e").style.backgroundColor = "gray";
+      }
+      function load() {
+        alert("image loaded");
+      }
+    </script>
+  </head>
+  <body>
+    <h1>onchange event</h1>
+    <select id="a" onchange="change()">
+      <option value="vaibhav">vaibhav</option>
+      <option value="pujan">pujan</option>
+      <option value="sanket">sanket</option>
+      <option value="bhavya">bhavya</option>
+      <option value="mudra">mudra</option>
+    </select>
+    <p id="b"></p>
+
+    <h1>onclick event</h1>
+    <button onclick="click1()">click here: show your name</button>
+    <p id="c"></p>
+
+    <h1>onmouseover and onmouseout event</h1>
+    <button onmouseover="mouseover()" onmouseout="mouseout()">
+      show your name
+    </button>
+    <p id="d"></p>
+
+    <h1>onkeydown event</h1>
+    <input type="text" id="e" onkeydown="keydown()" style="padding: 10px; font-size: 30px;" />
+
+    <h1>onload event</h1>
+    <img src="1.png" onload="load()" width="25%" height="25%">
+      
+  </body>
+</html>
