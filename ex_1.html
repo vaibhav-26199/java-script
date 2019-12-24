@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <h2>
+      Write a JavaScript program to capitalize the first letter of each word of
+      a given string.
+    </h2>
+    <p id="cap"></p>
+    <script>
+      var str = "my name is vaibhav savaliya";
+      var a = str.split(" ");
+      var b = a.map(function(value, index, array) {
+        return value[0].toUpperCase() + value.slice(1).toLowerCase();
+      });
+      var c = b.join(" ");
+      document.getElementById("cap").innerHTML = c;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<htnl>
+  <head> </head>
+  <body>
+    <h1>pop method</h1>
+    <p id="po"></p>
+    <h1>push method</h1>
+    <p id="pu"></p>
+    <h1>shift method</h1>
+    <p id="sif"></p>
+    <h1>inshift method</h1>
+    <p id="unsif"></p>
+    <h1>splice method</h1>
+    <p id="sp"></p>
+    <h1>concat method</h1>
+    <p id="con"></p>
+    <h1>sort method</h1>
+    <p id="st"></p>
+    <h1>sort method(numeric value)</h1>
+    <p id="st1"></p>
+    <h1>reverse method</h1>
+    <p id="re"></p>
+    <script>
+      var name1 = ["vaibhav", "pujan", "sanket", "bhavya", "mudra"];
+      var name2 = ["rushabh", "dhruvil", "jigar"];
+      var name3 = ["apple", "orange", "banana"];
+      var num = [1, 5, 56, 75, 3, 15, 26];
+      name1.pop();
+      document.getElementById("po").innerHTML = name1;
+      name1.push("parth");
+      document.getElementById("pu").innerHTML = name1;
+      name1.shift();
+      document.getElementById("sif").innerHTML = name1;
+      name1.unshift("vaibhav");
+      document.getElementById("unsif").innerHTML = name1;
+      name1.splice(2, 0, "shyam", "palak");
+      document.getElementById("sp").innerHTML = name1;
+      allname = name1.concat(name2);
+      document.getElementById("con").innerHTML = allname;
+      name1.sort();
+      document.getElementById("st").innerHTML = name1;
+      num.sort(function(a, b) {
+        return a - b;
+      });
+      document.getElementById("st1").innerHTML = num;
+      name3.reverse();
+      document.getElementById("re").innerHTML = name3;
+    </script>
+  </body>
+</htnl>

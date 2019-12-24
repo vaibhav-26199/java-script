@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <h1>Time</h1>
+    <p id="tm"></p>
+    <script>
+      var tim = new Date();
+      var days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ];
+      document.getElementById("tm").innerHTML =
+        "Today is : " +
+        days[tim.getDay()] +
+        " <br><br> Current time is : " +
+        tim.toLocaleString("en-US", { hour: "numeric", hour12: true }) +
+        " : " +
+        tim.getMinutes() +
+        " : " +
+        tim.getSeconds();
+    </script>
+  </body>
+</html>

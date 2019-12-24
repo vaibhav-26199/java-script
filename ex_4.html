@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h2>Write a JavaScript program to delete the rollno property from the following object</h2>
+        <h3>before delete property</h3>
+        <script>
+           var student = {  name : "David Rayy",  sclass : "VI",  rollno : 12 };
+           var i;   
+            for(i in student)
+            {
+                document.write(i + " : " + student[i] + " <br> ");
+            }
+            delete student["rollno"];
+        </script>
+        <h3>after delete property</h3>
+        <script>  
+            for(i in student)
+            {
+                document.write(i + " : " + student[i] + " <br> ");
+            }
+
+    </script>
+        </script>
+    </body>
+</html>

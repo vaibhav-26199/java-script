@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <h1>create object</h1>
+    <p id="demo"></p>
+    <script>
+      function name() {
+        return {
+          age: 21,
+          first_name: "vaibhav",
+          last_name: "savaliya"
+        };
+      }
+      var fullname = name();
+      document.getElementById("demo").innerHTML =
+        "fullname : " + fullname.first_name + " " + fullname.last_name;
+    </script>
+  </body>
+</html>

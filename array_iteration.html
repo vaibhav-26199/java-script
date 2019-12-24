@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <h1>foreach</h1>
+    <p id="fe"></p>
+    <h1>map</h1>
+    <p id="ma"></p>
+    <h1>filter</h1>
+    <p id="fi"></p>
+    <h1>reduce</h1>
+    <p id="re"></p>
+    <h1>every</h1>
+    <p id="ev"></p>
+    <h1>some</h1>
+    <p id="so"></p>
+    <h1>find</h1>
+    <p id="fnd"></p>
+    <script>
+      var txt = "";
+      var array1 = [45, 6, 78, 23, 28, 15];
+      array1.forEach(myfunction);
+      document.getElementById("fe").innerHTML = txt;
+      function myfunction(value, index, array) {
+        txt += value + "<br>";
+      }
+      var arr_map = [45, 6, 78, 23, 28, 15];
+      var arr_map1 = arr_map.map(myfunction1);
+      document.getElementById("ma").innerHTML = arr_map1;
+      function myfunction1(value, index, array) {
+        return value + 5;
+      }
+
+      var arr_filter = [45, 6, 78, 23, 28, 15];
+      var arr_filter1 = arr_filter.filter(myfunction2);
+      document.getElementById("fi").innerHTML = arr_filter1;
+      function myfunction2(value, index, array) {
+        return value > 29;
+      }
+
+      var arr_reduce = [45, 6, 78, 23, 28, 15];
+      var arr_reduce1 = arr_reduce.reduce(myfunction3);
+      document.getElementById("re").innerHTML = arr_reduce1;
+      function myfunction3(total, value, index, array) {
+        return total + value;
+      }
+
+      var arr_every = [45, 6, 78, 23, 28, 15];
+      var arr_every1 = arr_every.every(myfunction4);
+      document.getElementById("ev").innerHTML =
+        "every attribute are gretar then 29 : " + arr_every1;
+      function myfunction4(value, index, array) {
+        return value > 29;
+      }
+      var arr_some = [45, 6, 78, 23, 28, 15];
+      var arr_some1 = arr_some.some(myfunction5);
+      document.getElementById("so").innerHTML =
+        "some attribute are gretar then 29 : " + arr_some1;
+      function myfunction5(value, index, array) {
+        return value > 29;
+      }
+      var arr_find = [45, 6, 78, 23, 28, 15];
+      var arr_find1 = arr_find.find(myfunction6);
+      document.getElementById("fnd").innerHTML =
+        "find first attribute after 29 in array : " + arr_find1;
+      function myfunction6(value, index, array) {
+        return value > 29;
+      }
+    </script>
+  </body>
+</html>

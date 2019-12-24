@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <h1>Time</h1>
+    <p id="tm"></p>
+    <p id="tm2"></p>
+    <p id="tm3"></p>
+    <p id="tm4"></p>
+    <script>
+      var tim = new Date();
+      document.getElementById("tm").innerHTML =
+        tim.getMonth() + "-" + tim.getDate() + "-" + tim.getFullYear();
+      document.getElementById("tm2").innerHTML =
+        tim.getMonth() + "/" + tim.getDate() + "/" + tim.getFullYear();
+      document.getElementById("tm3").innerHTML =
+        tim.getDate() + "-" + tim.getMonth() + "-" + tim.getFullYear();
+      document.getElementById("tm4").innerHTML =
+        tim.getDate() + "/" + tim.getMonth() + "/" + tim.getFullYear();
+    </script>
+  </body>
+</html>
