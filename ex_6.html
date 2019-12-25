@@ -13,15 +13,15 @@
       function myfunction() {
         var str = document.getElementById("swp").value;
         var sp = str.split("");
-        var i,temp = "";
+        var i,chng = "";
         for (i = 0; i < sp.length; i++) {
           if (sp[i] === sp[i].toLowerCase()) {
-            temp += sp[i].toUpperCase();
+            chng += sp[i].toUpperCase();
           } else {
-            temp += sp[i].toLowerCase();
+            chng += sp[i].toLowerCase();
           }
         }
-        document.getElementById("swp1").innerHTML = temp;
+        document.getElementById("swp1").innerHTML = chng;
       }
     </script>
   </body>
