@@ -11,39 +11,18 @@
     <p id="swp1"></p>
     <script>
       function myfunction() {
-        var i;
         var str = document.getElementById("swp").value;
-        var temp = "";
-        for (i = 0; i < str.length; i++) {
-          if (str[i] === str[i].toLowerCase()) {
-            temp += str[i].toUpperCase();
+        var sp = str.split("");
+        var i,temp = "";
+        for (i = 0; i < sp.length; i++) {
+          if (sp[i] === sp[i].toLowerCase()) {
+            temp += sp[i].toUpperCase();
           } else {
-            temp += str[i].toLowerCase();
+            temp += sp[i].toLowerCase();
           }
         }
-
         document.getElementById("swp1").innerHTML = temp;
       }
     </script>
   </body>
 </html>
-
-<!--<!DOCTYPE html>
-<html>
-  <head> </head>
-  <body>
-    <h2>
-        Write a JavaScript program which accept a string as input and swap the case of each character. 
-    </h2>
-    <p id="swp"></p>
-    <script>
-      var str = "The Quick Brown Fox";
-      var a = str.split(" ");
-      var b = a.map(function(value, index, array) {
-        return value[0].toLowerCase() + value.slice(1).toUpperCase();
-      });
-      var c = b.join(" ");
-      document.getElementById("swp").innerHTML = c;
-    </script>
-  </body>
-</html>-->
