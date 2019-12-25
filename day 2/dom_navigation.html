@@ -1,0 +1,23 @@
+<html>
+  <head> </head>
+  <body>
+    <p id="id1">mango</p>
+    <p id="id1">apple</p>
+    <p id="id1">orange</p>
+    <p id="id1">banana</p>
+    <h1>firstChild</h1>
+    <p id="pr"></p>
+    <h1>Nodename property</h1>
+    <p id="pr1"></p>
+    <h1>Nodetype property</h1>
+    <p id="pr2"></p>
+
+    <script>
+      document.getElementById("pr").innerHTML = document.getElementById("id1").firstChild.nodeValue;
+      alert(document.body.innerHTML);
+      alert(document.documentElement.innerHTML);
+      document.getElementById("pr1").innerHTML = document.getElementById("id1").nodeName;
+      document.getElementById("pr2").innerHTML = document.getElementById("id1").nodeType;
+    </script>
+  </body>
+</html>

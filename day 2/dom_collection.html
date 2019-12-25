@@ -1,0 +1,27 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p>my name is vaibhav.</p>
+        <p>my name is pujan</p>
+        <p>my name is sanket</p>
+        <p>hello everyone</p>
+        <p id="use"></p>
+        <button onclick="myf()">click here</button>
+        <script>
+            var x=document.getElementsByTagName("p");
+            document.getElementById("use").innerHTML="second line : "+ x[1].innerHTML;
+            document.getElementById("use").innerHTML="count of line : : "+ x.length;
+
+            function myf(){
+                var y=document.getElementsByTagName("p");
+                var i;
+                for(i=0;i<y.length;i++)
+                {
+                    x[i].style.backgroundColor="lightblue"
+                }
+            }
+        </script>
+    </body>
+</html>

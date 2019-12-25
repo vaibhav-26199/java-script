@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <style>
+            #main{
+                height: 25%;
+                width: 100%;
+                padding: 5px;
+                background-color: lightgrey;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <p>my name is vaibhav.my name is vaibhav.my name is vaibhav.my name is vaibhav.my name is vaibhav.
+                my name is vaibhav.my name is vaibhav.my name is vaibhav.my name is vaibhav.my name is vaibhav.
+                my name is vaibhav.my name is vaibhav.</p>
+                <button onclick="myfunction4()">remove</button>
+                <p id="mt"></p>
+        </div>
+        
+        <button id="btn">click me</button>
+        <p id="op"></p>
+        <script>
+            document.getElementById("main").addEventListener("mousemove", myfunction3)
+            function myfunction3(){
+                document.getElementById("mt").innerHTML=Math.random();
+            }
+            function myfunction4(){
+                document.getElementById("main").removeEventListener("mousemove", myfunction3)
+            }
+
+            var x=document.getElementById("btn");
+            x.addEventListener("click", myfunction);
+            x.addEventListener("mouseover", myfunction1);
+            x.addEventListener("mouseout", myfunction2);
+
+            function myfunction(){
+                document.getElementById("op").innerHTML=Date();
+            }
+
+            function myfunction1(){
+                document.getElementById("op").innerHTML="mouse over";
+            }
+
+            function myfunction2(){
+                document.getElementById("op").innerHTML="mouseout";
+            }
+            
+
+            
+            
+            
+        </script>
+    </body>
+</html>

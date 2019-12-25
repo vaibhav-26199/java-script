@@ -1,0 +1,26 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>onchange event</h1>
+        <input type="text" id="cn" placeholder="enter your name" onchange="chng()" style="width: 25%;">
+        <script>
+            function chng(){
+            var x=document.getElementById("cn");
+            x.value=x.value.toUpperCase();
+        }
+        </script>
+
+        <h1>onmouseover and onmouseout Events</h1>
+        <p onmouseover="over(this)" onmouseout="out(this)">my name is vaibhav</p>
+        <script>
+            function over(x){
+                x.innerHTML="my name is pujan";
+            }
+            function out(x){
+                x.innerHTML="my name is vaibhav"
+            }
+        </script>
+    </body>
+</html>
