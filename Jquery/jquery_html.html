@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <style>
+      .blue {
+        background-color: burlywood;
+        width: 30%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>get and set</h1>
+    <p id="text">hello! <b>how are you.</b> i am fine.</p>
+    <button id="btn1">text</button>
+    <button id="btn2">html</button>
+    <button id="btn3">settext</button>
+    <button id="btn4">sethtml</button>
+
+    <h1>add</h1>
+    <ul>
+      <li>vaibhav</li>
+      <li>pujan</li>
+      <li>sanket</li>
+    </ul>
+
+    <button id="btn5">append</button>
+    <button id="btn6">prepend</button>
+
+    <h1>remove, empty</h1>
+    <div
+      style="height: 20%; width: 20%; padding: 5px; margin-bottom: 10px; background-color: indianred;"
+    >
+      <p>hello</p>
+      <span>how are you</span>
+    </div>
+    <button id="btn7">remove</button>
+    <button id="btn8">empty</button>
+
+    <h1>
+      CSS Classes<br />
+      <br />
+    </h1>
+    <h2 id="a1">vaibhav</h2>
+    <h3 id="a1">vaibhav</h3>
+    <h4 id="a1">vaibhav</h4>
+    <h5 id="a1">vaibhav</h5>
+    <button id="btn9">add class</button>
+    <button id="btn10">remove class</button>
+    <button id="btn11">toggle class</button>
+
+    <script src="jquery.js"></script>
+    <script>
+      //get and set
+
+      $(document).ready(function() {
+        $("#btn1").click(function() {
+          alert($("#text").text());
+        });
+        $("#btn2").click(function() {
+          alert($("#text").html());
+        });
+        $("#btn3").click(function() {
+          $("#text").text("hello! i am vaibhav");
+        });
+        $("#btn4").click(function() {
+          $("#text").html("hello! i am <b>vaibhav<b>");
+        });
+
+        //append and prepend
+
+        $("#btn5").click(function() {
+          $("ul").append("<li>bhavya</li>");
+        });
+        $("#btn6").click(function() {
+          $("ul").prepend("<li>mudra</li>");
+        });
+
+        //remove and empty
+
+        $("#btn7").click(function() {
+          $("div").remove();
+        });
+        $("#btn8").click(function() {
+          $("div").empty();
+        });
+
+        //CSS Classes
+
+        $("#btn9").click(function() {
+          $("h2,h3,h4,h5").addClass("blue");
+        });
+        $("#btn10").click(function() {
+          $("h2,h3,h4,h5").removeClass("blue");
+        });
+        $("#btn11").click(function() {
+          $("h2,h3,h4,h5").toggleClass("blue");
+        });
+      });
+    </script>
+  </body>
+</html>

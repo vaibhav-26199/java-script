@@ -1,0 +1,97 @@
+<html>
+    <head></head>
+    <body>
+        <h1>hide , show , toggle and callback</h1>
+        <button id="btn1">hide</button>
+        <button id="btn2">show</button>
+        <button id="btn3">toggle</button>
+        <button id="btn13">hiding after alert(callback)</button>
+        <p id="pg">my name is vaibhav. i am not a terrorist.</p id="pg">
+
+            <h1>Fadding</h1>
+            <button id="btn4">fadein</button>
+        <button id="btn5">fadeout</button>
+        <button id="btn6">fadetoggle</button>
+        <button id="btn7">fadeTo</button>
+        <div id="fd" style="padding: 5px; height: 50px; width: 50px; background-color: rgb(167, 23, 44); margin-top: 30px;"></div>
+
+        <h1>Slide up,down,toggle and stop</h1>
+        <button id="btn9">slideUp</button>
+        <button id="btn8">slideDown</button>    
+        <button id="btn10">slideToggle</button>
+        <button id="btn12">sliding stop</button>
+        <button id="btn14">sliding updown(chain)</button>
+        <div style="padding: 2px; text-align: center; background-color: lime; margin-top: 30px;"><p>click buttons</p></div>
+        <div id="sl1" style="background-color: green; height: 100px; width: 100%; "></div>
+
+        <h1>Animate</h1>
+
+        <button id="btn11">start</button>
+        <p id="an" style="border: 2px solid black; background-color: green; padding: 2px; width: 60px; position: absolute;">vaibhav</p>
+
+        <script src="jquery.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#btn1").click(function(){
+                    $("#pg").hide(1000);
+                }),
+                $("#btn2").click(function(){
+                    $("#pg").show(1000);
+                }),
+                $("#btn3").click(function(){
+                    $("#pg").toggle(1000);
+                })
+                $("#btn13").click(function(){
+                    $("#pg").hide(function(){
+                        alert("hide successfull....");
+                    });
+                })
+
+                //fading
+
+                $("#btn4").click(function(){
+                    $("#fd").fadeIn();
+                }),
+                $("#btn5").click(function(){
+                    $("#fd").fadeOut("slow");
+                }),
+                $("#btn6").click(function(){
+                    $("#fd").fadeToggle(1000);
+                })
+                $("#btn7").click(function(){
+                    $("#fd").fadeTo("slow",0.4);
+                })
+
+                //slide up,down,toggle and stop
+
+                $("#btn8").click(function(){
+                    $("#sl1").slideDown();
+                }),
+                $("#btn9").click(function(){
+                    $("#sl1").slideUp("slow");
+                }),
+                $("#btn10").click(function(){
+                    $("#sl1").slideToggle(1000);
+                })
+                $("#btn12").click(function(){
+                    $("#sl1").stop();
+                })
+                $("#btn14").click(function(){
+                    $("#sl1").slideUp(1000).slideDown(1000)
+
+                })
+
+                //animate
+
+                $("#btn11").click(function(){
+                    $("#an").animate({
+                        left: "250px",height: "150px",width: "150px"
+                    });
+                })
+
+            })
+
+            
+        </script>
+    </body>
+</html>

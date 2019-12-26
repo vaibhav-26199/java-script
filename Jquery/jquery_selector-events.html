@@ -1,0 +1,65 @@
+<html>
+  <head> </head>
+  <body>
+    <h1>hello world....</h1>
+    <div>
+      <ul class="jq">
+        <li>vaibhav</li>
+        <li>pujan</li>
+        <li>sanket</li>
+        <li>parth</li>
+        <li>shyam</li>
+      </ul>
+    </div>
+    <div id="jq1">
+      <p>
+        my name is vaibhav. my name is vaibhav. my name is vaibhav.
+      </p>
+      <p>
+        my name is vaibhav. my name is vaibhav. my name is vaibhav.
+      </p>
+      <p>
+        my name is vaibhav. my name is vaibhav. my name is vaibhav.
+      </p>
+      <p>
+        my name is vaibhav. my name is vaibhav. my name is vaibhav.
+      </p>
+    </div>
+    <button>click me....</button>
+    <script src="jquery.js"></script>
+    <script>
+      $(document).ready(function() {
+          $("h1").click(function(){
+              $(this).hide();
+          })
+        $(".jq").css("border", "2px solid black");
+        $("button").mouseover(function() {
+          $("#jq1").css("background-color", "lightgrey");
+        });
+        $("button").click(function() {
+          $("p").css("color", "red");
+        });
+        $("#jq1").click(function() {
+          $("#jq1").css("background-color", "lightblue");
+        });
+        $("#jq1").dblclick(function() {
+          $("#jq1").css("background-color", "lightgreen");
+        });
+        $("p:first-child").on({
+          mouseover: function() {
+            $("p:first-child").css("font-size", "30px");
+          },
+          mouseout: function() {
+            $("p:first-child").css("font-size", "16px");
+          }
+        });
+        $(".jq").mouseenter(function() {
+          $(".jq").css("background-color", "yellow");
+        });
+        $(".jq").mouseleave(function() {
+          $(".jq").css("background-color", "white");
+        });
+      });
+    </script>
+  </body>
+</html>

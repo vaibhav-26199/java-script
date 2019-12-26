@@ -1,0 +1,76 @@
+<html>
+  <head> </head>
+  <body>
+    <h1><br />Ancestors and Descendants<br /><br /></h1>
+    <div style="border: 5px solid black; padding: 5px;">
+      <div>
+        i am the boss.
+        <ul>
+          unodered list
+          <li>vaibhav</li>
+          <li>pujan</li>
+          <li>sanket</li>
+        </ul>
+      </div>
+
+      <div id="pbs">
+        i am parent boss.
+        <div id="bs">
+          i am the boss.
+          <ul>
+            unodered list
+            <li id="sss">vaibhav</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <h1><br />Sibiling<br /><br /></h1>
+    <div id="oo" style="border: 5px solid black; padding: 5px;">
+      <h1>vaibhav</h1>
+      <h2 class="cc">vaibhav</h2>
+      <h3 class="cc">vaibhav</h3>
+      <h4>vaibhav</h4>
+      <h5>vaibhav</h5>
+      <h6>vaibhav</h6>
+    </div>
+
+    <h1><br />filtering<br /><br /></h1>
+    <div style="border: 5px solid black; padding: 5px;">
+      <p class="fi">vaibhav savaliya</p>
+      <p class="fi">pujan vachhani</p>
+      <p>sanket sakhareliya</p>
+      <p>bhavya bhojani</p>
+      <p>mudra mudra</p>
+    </div>
+    <script src="jquery.js"></script>
+    <script>
+      $(document).ready(function() {
+        //Ancestors and Descendants
+
+        //$("li").parent().css({"color":"green" , "border" : "2px solid red" });
+        //$("#sss").parents().css({"color":"green" , "border" : "2px solid red" });
+        //$("#sss").parentsUntil("#pbs").css({"color":"green" , "border" : "2px solid red" });
+        //$("#bs").children().css({"color":"green" , "border" : "2px solid red" });
+        $("div").find("li").css({ color: "green", border: "2px solid red" });
+
+        //Sibiling
+
+        //$("h4").siblings().css("color","red");
+        //$("h4").next().css("color","red");
+        //$("h4").nextAll().css("color","red");
+        //$("h1").nextUntil("h5").css("color","red");
+        //$("h3").prev().css("color","red");
+        //$("h4").prevAll().css("color","red");
+        $("h6").prevUntil("h1").css("color", "red");
+
+        //filtering
+
+        //$("p").first().css("color","red");
+        //$("p").last().css("color","red");
+        //$("p").eq(3).css("color","red");
+        //$("p").filter(".fi").css("color","red");
+        $("p").not(".fi").css("color", "red");
+      });
+    </script>
+  </body>
+</html>
