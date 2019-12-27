@@ -24,7 +24,7 @@
     </style>
   </head>
   <body>
-    <form id="v_form">
+    <form action="jquery_selector-events.html">
       <table>
         <tr>
           <td><h3 id="hading">Personal information</h3></td>
@@ -39,8 +39,8 @@
               type="text"
               name="first name"
               style="width:250px;"
-              required
             />
+            <br /><small id="re"></small>
           </td>
         </tr>
         <tr>
@@ -51,8 +51,8 @@
               type="text"
               name="first name"
               style="width:250px;"
-              required
             />
+            <br /><small id="re1"></small>
           </td>
         </tr>
         <tr>
@@ -162,11 +162,11 @@
           <td>
             <input
               id="email"
-              type="email"
+              type="text"
               name="email"
               style="width:250px;"
             /><br />
-            <small>(your email address will be your username)</small>
+            <small id="re2"></small>
           </td>
         </tr>
         <tr>
@@ -188,7 +188,7 @@
               type="password"
               name="password"
               style="width:250px;"
-            /><br />
+            /><br /><small id="re3"></small>
             <small>(min. 8 characters. 1 number.case-sensitve)</small>
           </td>
         </tr>
@@ -272,41 +272,85 @@
           <td id="left">Phone:</td>
           <td>
             <input
+              id="phone"
               type="tel"
               style="width:160px;"
               pattern="[7-9]{1}[0-9]{9}"
               maxlength="10"
-              required
             />&nbsp;
             <select name="mobile" id="mobile" style="width:80px;">
               <option value="Mobile">Mobile</option>
             </select>
-            <br /><small>(No spaces or dashes)<br /><br /></small>
-            <input type="submit" value="submit" />
+            <br /><small id="re4"></small>
+            <small>(No spaces or dashes)<br /><br /></small>
+            <input id="submit1" type="submit" value="submit" />
           </td>
         </tr>
       </table>
     </form>
     <script src="jquery.js"></script>
     <script>
-      var email = $("#email").val();
-      var password = $("#password").val();
       $(document).ready(function() {
-        $(".red").remove();
-        if (email.length < 1) {
-          $("#email").after('<small class="error">This field is required</small>');
-        } else {
-          var regEx = /^[A-Z0-9][A-Z0-9._%+-]{0,63}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/;
-          var validEmail = regEx.test(email);
-          if (!validEmail) {
-            $("#email").after('<small class="red">Enter a valid email</small>');
+        $("#submit1").click(function() {
+
+          //first name
+
+          var fname = $("#f_name").val(); 
+          if (fname == "") {
+            $("#re").html("not field first name."),
+              $("#re").css("color", "red");
+            return false;
           }
-        }
-        if (password.length < 8) {
-          $("#password").after(
-            '<small class="red"><br>Password must be at least 8 characters long</small>'
-          );
-        }
+
+          //last name
+
+          var lname = $("#l_name").val();
+          if (lname == "") {
+            $("#re1").html("not field last name."),
+              $("#re1").css("color", "red");
+            return false;
+          }
+
+          //email
+
+          var email1 = $("#email").val();
+          var em = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+          var check = em.test(email1);
+          if (email1 == "") {
+            $("#re2").html("not field email address."),
+              $("#re2").css("color", "red");
+            return false;
+          }
+          if (!check) {
+            $("#re2").html("not correct email address."),
+              $("#re2").css("color", "red");
+            return false;
+          }
+
+          //password
+
+          var pass = $("#password").val();
+          if (pass == "") {
+            $("#re3").html("please enter password"),
+              $("#re3").css("color", "red");
+            return false;
+          }
+
+          //phone number
+
+          var ph = $("#phone").val();
+          var phonerang = /^\d{10}$/;
+          var check1 = phonerang.test(ph);
+          if (ph == "") {
+            $("#re4").html("enter your phone number"),
+              $("#re4").css("color", "red");
+            return false;
+          }
+          if (!check1) {
+            alert("phone number is not valid");
+            return false;
+          }
+        });
       });
     </script>
   </body>

@@ -1,0 +1,23 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="chng"><h2>hellooo!.... my name is vaibhav.</h2></div>
+        <button>click here</button>
+        <script src="jquery.js"></script>
+        <script>
+           $(document).ready(function() {
+        $("button").click(function(){
+        $.ajax({
+          url: "ajax_file.txt",
+          success: function(result) {
+            $("#chng").html(result);
+          }
+        })
+      });
+    })
+            
+        </script>
+    </body>
+</html>
