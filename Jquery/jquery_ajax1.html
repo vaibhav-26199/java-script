@@ -1,0 +1,18 @@
+<html>
+  <head> </head>
+  <body>
+    <div id="chng"><h2>hellooo!.... my name is vaibhav.</h2></div>
+    <button>click here</button>
+    <script src="jquery.js"></script>
+    <script>
+        $("button").click(function(){
+      var a  = new XMLHttpRequest();
+      a.open("GET", "ajax_file.txt", true);
+      a.send();
+      a.onload = function() {
+        $("#chng").html(a.responseText);
+      };
+        });
+    </script>
+  </body>
+</html>
